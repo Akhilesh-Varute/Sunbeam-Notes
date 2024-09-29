@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <input type="button" id="btnStart" value="Start" onclick="Start()" />
+    <input
+      type="button"
+      id="btnStop"
+      disabled="disabled"
+      value="Stop"
+      onclick="Stop()"
+    />
+
+    <img
+      id="myCar"
+      style="
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        top: 8px;
+        left: 0px;
+      "
+      src="car.png"
+    />
+
+    <div
+      style="
+        height: 50px;
+        width: 500px;
+        background-color: black;
+        position: absolute;
+        top: 80px;
+      "
+    ></div>
+
+    <script>
+      var counter = 0;
+      var tokenArray = new Array();
+
+      function KeepGoing() {
+        console.log(counter);
+        counter = counter + 1;
+        var refToMyCar = document.getElementById("myCar");
+        refToMyCar.style.left = counter + "px";
+        if (counter > 480) {
+          for (var i = 0; i < tokenArray.length; i++) {
+            var token = tokenArray.pop();
+            window.clearInterval(token);
+          }
+        }
+      }
+      function Start() {
+        var refTobtnStop = document.getElementById("btnStop");
+
+        refTobtnStop.disabled = null;
+
+        var token = window.setInterval(KeepGoing, 100);
+        tokenArray.push(token);
+      }
+
+      function Stop() {
+        var token = tokenArray.pop();
+        if (token != undefined) {
+          window.clearInterval(token);
+          if (tokenArray.length == 0) {
+            var refTobtnStop = document.getElementById("btnStop");
+
+            refTobtnStop.disabled = "disabled";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

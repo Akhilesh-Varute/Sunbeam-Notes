@@ -1,0 +1,96 @@
+1. Understand java.util.Optional<T> class n it's methods
+
+Method of Optional class :
+public  T orElseThrow​(Supplier exceptionSupplier) 
+T : type of the value
+
+If a value is present, returns the value, otherwise throws an exception produced by the exception supplying function.
+
+1.1 How will you use it with Spring Data JPA API ?
+eg : 1. Get emp details by it's ID
+Given : public class ResourceNotFoundExc extends RuntimeException
+{...}
+
+EmpDao extends JpaRepository<Emp,Long>
+{}
+Uses inherited method
+In EmpService : 
+@AutoWired 
+private EmpDao dao;
+
+public Emp getEmpDetails(Long empId)
+{
+  return dao.findById(empId).orElseThrow(() -> new ResourceNotFoundExc(....));
+}
+2. User sign in
+eg : public interface UserRepository extends JpaRepository<User,Long>
+{
+   Optional<User> findByEmailAndPassword(String em,String pass);
+} 
+
+Will be invoked from : UserServiceImpl
+User user=userDao.findByEmailAndPassword(email,pwd)..orElseThrow(() -> new ResourceNotFoundExc(....));
+
+2. Revise HttpServletResponse sendRedirect
+What will happen , if you call from LoginServlet , 
+response.sendRedirect("candidate_list");
+
+3. Same is achieved in Spring MVC controller , by
+"redirect:/emps/list?deptId=" + deptId
+
+SC (WC ) --->sends temp redirect resp --> SC 302 | location = "/ctx_path/emps/list" | body : EMPTY
+
+Browser ---> http://host:port/ctx/emps/list
+
+
+4. Detailed walk through the code.
+day14_boot_mvc
+
+5. What happens when you run the project as Spring boot app ?
+
+Spring Data JPA Links (Bookmark them!)
+1. API Docs : https://docs.spring.io/spring-data/jpa/docs/2.7.14/api/
+2. Ref docs : https://docs.spring.io/spring-data/jpa/docs/2.7.14/reference/html/
+
+
+---------------------------Monolithic web app over-------------------------
+
+6. Enter Spring Boot REST 
+Refer : "day14-data\day14_help\Spring Boot REST Steps.txt"
+
+
+7. Install Lombok 
+
+To reduce boilerplate code from the entities Layer , add Lombok annotations
+
+Ref : https://www.baeldung.com/intro-to-project-lombok
+
+What is Lombok ?
+It's helper 3rd party library , to reduce boilerplate code from java classes  , using annotations
+Steps 
+1. Add lombok dependency, during creation of spring boot project.
+2. Install Lombok library.
+3. Use annotations
+eg : @NoArgsConstructor , @AllArgsConstructor
+@Getter
+@Setter
+@ToString(exclude = ...,callSuper = true)
+@Data n many more
+
+Steps 
+1. Add lombok dependency : pom.xml (already done !)
+2. install lombok jar , from 
+<home dir> \.m2\repository\org\projectlombok\lombok\1.18.30
+OR open terminal/cmd prompt
+java -jar lombok-1.18.30.jar
+Specify location : IDE (STS : IDE app)
+2.5 Maven force update +  cleaning steps
+3. use annotations.
+
+To Locate IDE installation : 
+From STS IDE  --Help --Installation Details -- Configuration
+eg : C:\sts-bundle\sts-3.9.18.RELEASE\STS.exe 
+n Install Lombok JAR.
+
+
+Refer : Spring boot testing

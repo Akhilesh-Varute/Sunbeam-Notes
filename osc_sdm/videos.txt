@@ -1,0 +1,5 @@
+1. Introduction to YAML
+https://www.youtube.com/watch?v=pt0ovzQhqFc&list=PLnDkZeFQjSCN1X1Rw5aEBXDNWpytFKHSQ&index=5
+
+2. Microservices
+https://www.youtube.com/watch?v=MYyEasF0Smo

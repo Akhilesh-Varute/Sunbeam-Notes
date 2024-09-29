@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      style="height: 100px; width: 200px; background-color: cadetblue"
+      id="myDiv"
+      onmouseover="Execute()"
+      onmouseout="Revert()"
+    ></div>
+
+    <script>
+      function Execute() {
+        debugger;
+        var refToMyDiv = document.getElementById("myDiv");
+        refToMyDiv.style.backgroundColor = "yellow";
+      }
+
+      function Revert() {
+        debugger;
+        var refToMyDiv = document.getElementById("myDiv");
+        refToMyDiv.style.backgroundColor = "cadetblue";
+      }
+    </script>
+  </body>
+</html>

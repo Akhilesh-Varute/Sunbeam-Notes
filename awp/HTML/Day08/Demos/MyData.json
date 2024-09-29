@@ -1,0 +1,23 @@
+[
+    {
+    "No": 1,
+    "Name": "Mahesh",
+    "IsEmployee": false,
+    "FavTech": "undefined",
+    "Expertise":["JS", "React", ".NET"]   
+    },
+    {
+        "No": 2,
+        "Name": "Nilesh",
+        "IsEmployee": true,
+        "FavTech": "undefined",
+        "Expertise": ["CPP", "Java"]
+    },
+    {
+        "No": 3,
+        "Name": "Rahul",
+        "IsEmployee": true,
+        "FavTech": "undefined",
+        "Expertise": ["CPP", "Java", "DB", ".NET", "React", "etc"]
+    }
+]

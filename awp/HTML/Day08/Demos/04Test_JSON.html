@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <h1>Welcome To Sunbeam</h1>
+      <div id="progressbar" style="display: none">
+        <img src="progress.gif" style="height: 100px; width: 100px" />
+      </div>
+      <table id="myTable" style="width: 400px" border="1">
+        <thead>
+          <th>No</th>
+          <th>Name</th>
+          <th>IsEmployee</th>
+        </thead>
+        <tbody id="myTableBody"></tbody>
+      </table>
+    </center>
+
+    <script>
+      var refToProgessDiv = document.getElementById("progressbar");
+
+      refToProgessDiv.style.display = "block";
+      var helper = new XMLHttpRequest();
+
+      helper.onreadystatechange = () => {
+        console.log("now readystate is " + helper.readyState);
+        if (helper.readyState == 4 && helper.status == 200) {
+          debugger;
+          var responseInString = helper.responseText;
+          var employees = JSON.parse(responseInString);
+
+          var refToTableBody = document.getElementById("myTableBody");
+
+          for (var i = 0; i < employees.length; i++) {
+            var employee = employees[i];
+
+            var row =
+              `<tr>
+                <td>` +
+              employee.No +
+              `</td>
+                <td>` +
+              employee.Name +
+              `</td>
+                <td>` +
+              employee.IsEmployee +
+              `</td>
+               </tr>`;
+            refToTableBody.innerHTML = refToTableBody.innerHTML + row;
+          }
+          refToProgessDiv.style.display = "none";
+        }
+      };
+
+      helper.open("GET", "http://127.0.0.1:5500/mydata.json");
+      helper.send();
+    </script>
+  </body>
+</html>

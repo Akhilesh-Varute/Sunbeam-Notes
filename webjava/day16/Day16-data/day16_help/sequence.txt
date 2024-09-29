@@ -1,0 +1,98 @@
+1. Internals of Transaction Management with Spring / Spring Boot
+Refer : "day16-data\day16_help\transactions\Tx management.png"
+
+
+2. Spring boot internals 
+refer : readme
+
+3. Introduction to ResponseEntity
+o.s.http.ResponseEntity<T>  : generic class
+T : type of the response body
+It represents an ENTIRE response packet , consisting of 
+response status code | Header/s | Resp body
+
+3.1  o.s.http.ResponseEntity<T>
+Ctor : ResponseEntity(T body, HttpStatus status);
+HttpStatus : enum containing Resp status codes
+
+OR Methods
+ResponseEntity.status(HttpStatus status).body(T body)
+
+4. Solve end point  n revise : validations , exc handling
+Employee authentication
+
+Answer this
+If REST client sends this :
+http://host:port/employees?empId=10
+How will you bind it to a method argument ?
+Ans : @RequestParam
+
+
+If REST client sends this :
+http://host:port/employees/10
+How will you bind it to a method argument ?
+Ans : @PathVariable
+
+
+If REST client sends JSON representation of the form data : 
+How will you bind it to a method argument ?
+Ans : @RequestBody
+
+
+5. Inheritance in JPA / Hibernate
+
+6. Spring Boot AOP 
+Ref : readme
+Ref : spring_boot_aop (It's a monolithic web app , containing JSP based view Layer)
+Steps
+6.1 Run JUnit Test case , to set up DB
+TestUserDao.java
+(It will add 1 customer n 1 admin)
+6.2 Run the project as Spring Boot app
+User Login : as customer / admin 
+Check if it's working 
+
+6.3 Now if you want to intercept all the requests sent to this application n maintain a server side log , how will you do it ?
+Refer : "day16_help\Regarding logging framework in Java.txt"
+Refer : "day16_help\AOP\readme_aop.txt"
+
+
+7. Enter Spring security
+
+
+Understand spring security architecture
+1."day16_help\spring security\regarding spring security.txt"
+2."day16_help\spring security\diagrams\spring security architecture.jpeg"
+3."day16_help\spring security\diagrams\Ultimate Details of Spring Security Architecture.png"
+4."day16_help\spring security\Spring Security Flow.txt"
+5. import "spring_boot_backend_security_jwt_template" , in your workspace.
+(It will download spring security related dependencies)
+
+Steps
+1. Create spring boot application , w/o adding spring security dependencies
+Try to access some end points (eg : view products , add / delete products ..)
+Observation : all end points were un protected !
+
+2. Add spring security starter dependency in pom.xml , update maven project
+Observations
+2.1  : All end points are automatically PROTECTED (SECURED)
+i.e entire web app is under a lock (authentication lock).
+Un authenticated user CAN NOT access any of the APIs.
+2.2 It supplies def user name : user
+generate 128 bit randomly generated password on server console 
+You can test it using a browser. It will give you a ready made signin n signout form
+Understand this : By def spring security offers : form login n also authentication mechanism = Basic Authentication.
+
+What is Basic Authentication scheme of HTTP?
+
+1. Any time clnt sends a req to protected resource --spring sec uses by default : basic auth
+Server sends resp header : WWW-Autheticate --- Basic 
+2. clnt has to send username:password --- base64 encoding
+auto sent by postman , using Basic Authentication scheme.
+3. Continue to in mem based authentication(InMemory User Details)
+Ref eclipse project : 
+
+4. Replace it by DB based authentication (DB based  User Details , accessed using JPA)
+Ref eclipse project : 
+
+

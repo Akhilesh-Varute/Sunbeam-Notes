@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body id="myBody" onload="Execute()">
+    <a
+      onclick="DoLogin()"
+      style="
+        float: right;
+        margin: 10px;
+        color: blue;
+        text-decoration: underline;
+      "
+      >Login</a
+    >
+
+    <h1>Sunbeam</h1>
+    <p>
+      jhvgjgvjfgvjfvjf jhgjfgvgjfgvjgjvgfjvgjfgj
+      gjgvjfgvjfgvjfgvjgfvjgjgvjgvjfgvjfgvjfgvjfgvjfgvjfgvjgvjfvgfffffffffffffvgjghhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+    </p>
+
+    <h1>Sunbeam</h1>
+    <p>
+      jhvgjgvjfgvjfvjf jhgjfgvgjfgvjgjvgfjvgjfgj
+      gjgvjfgvjfgvjfgvjgfvjgjgvjgvjfgvjfgvjfgvjfgvjfgvjfgvjgvjfvgfffffffffffffvgjghhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+    </p>
+    <h1>Sunbeam</h1>
+    <p>
+      jhvgjgvjfgvjfvjf jhgjfgvgjfgvjgjvgfjvgjfgj
+      gjgvjfgvjfgvjfgvjgfvjgjgvjgvjfgvjfgvjfgvjfgvjfgvjfgvjgvjfvgfffffffffffffvgjghhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+    </p>
+    <h1>Sunbeam</h1>
+    <p>
+      jhvgjgvjfgvjfvjf jhgjfgvgjfgvjgjvgfjvgjfgj
+      gjgvjfgvjfgvjfgvjgfvjgjgvjgvjfgvjfgvjfgvjfgvjfgvjfgvjgvjfvgfffffffffffffvgjghhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+    </p>
+    <h1>Sunbeam</h1>
+    <p>
+      jhvgjgvjfgvjfvjf jhgjfgvgjfgvjgjvgfjvgjfgj
+      gjgvjfgvjfgvjfgvjgfvjgjgvjgvjfgvjfgvjfgvjfgvjfgvjfgvjgvjfvgfffffffffffffvgjghhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+    </p>
+
+    <div
+      style="
+        height: 200px;
+        width: 300px;
+        background-color: skyblue;
+        position: absolute;
+        left: 270px;
+        top: 100px;
+      "
+      id="loginBox"
+    >
+      <center>
+        <br /><br /><br />
+        <table>
+          <tr>
+            <td>UserName</td>
+            <td>
+              <input type="text" />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Password</td>
+            <td>
+              <input type="password" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="button" value="Sign In" onclick="SignIn()" />
+            </td>
+          </tr>
+        </table>
+      </center>
+    </div>
+    <script>
+      function SignIn() {
+        var refTologinBox = document.getElementById("loginBox");
+        refTologinBox.style.display = "none";
+
+        var refToBody = document.getElementById("myBody");
+
+        refToBody.style.backgroundColor = "white";
+      }
+      function Execute() {
+        var refTologinBox = document.getElementById("loginBox");
+        refTologinBox.style.display = "none";
+      }
+      function DoLogin() {
+        debugger;
+        var refToBody = document.getElementById("myBody");
+
+        refToBody.style.backgroundColor = "gray";
+        var refTologinBox = document.getElementById("loginBox");
+        refTologinBox.style.display = "block";
+      }
+    </script>
+  </body>
+</html>

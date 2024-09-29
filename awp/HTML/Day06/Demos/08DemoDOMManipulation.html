@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      style="height: 100px; width: 200px; background-color: red"
+      id="myDiv"
+    ></div>
+
+    <br />
+    <input type="button" value="Click Me" onclick="Move()" />
+
+    <script>
+      var counter = 0;
+
+      function Move() {
+        counter = counter + 20;
+        var refToMyDiv = document.getElementById("myDiv");
+        refToMyDiv.style.marginLeft = counter + "px";
+      }
+    </script>
+  </body>
+</html>

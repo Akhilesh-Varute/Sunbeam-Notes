@@ -1,0 +1,10 @@
+1. Implement add and delete at position in doubly circular linked list.
+
+2. Implement stack and queue using linked list.
+
+3. Implement Deque using doubly linear linked list with head & tail.
+
+4. Write recursive function to add node into bst.
+
+
+

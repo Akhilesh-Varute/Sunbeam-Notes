@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Registration</title>
+  </head>
+  <body>
+    <center>
+      <table style="width: 300px" border="1">
+        <tr>
+          <td>Name</td>
+          <td>
+            <input type="text" id="txtName" />
+          </td>
+          <td>
+            <div style="color: red; width: 200px" id="divForNameError"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td>
+            <input type="text" id="txtAddress" />
+          </td>
+          <td>
+            <div style="color: red; width: 200px" id="divForAddressError"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="3">
+            <input type="button" value="Register" onclick="DoRegister()" />
+          </td>
+        </tr>
+      </table>
+    </center>
+
+    <script>
+      function DoRegister() {
+        ValidateNameForEmpty();
+        ValidateAddressForEmpty();
+      }
+
+      function ValidateNameForEmpty() {
+        var refToTxtName = document.getElementById("txtName");
+        var refToDivForNameError = document.getElementById("divForNameError");
+
+        if (refToTxtName.value == "") {
+          refToDivForNameError.innerText = "Name is required.";
+        } else {
+          refToDivForNameError.innerText = "";
+          console.log(refToTxtName.value);
+        }
+      }
+
+      function ValidateAddressForEmpty() {
+        var refToTxtAddress = document.getElementById("txtAddress");
+        var refToDivForAddressError =
+          document.getElementById("divForAddressError");
+
+        if (refToTxtAddress.value == "") {
+          refToDivForAddressError.innerText = "Address is required.";
+        } else {
+          refToDivForAddressError.innerText = "";
+          console.log(refToTxtAddress.value);
+        }
+      }
+    </script>
+  </body>
+</html>

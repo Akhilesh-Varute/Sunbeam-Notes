@@ -1,0 +1,10 @@
+1. Implement heap sort using heapify method.
+
+2. Count occurrences of each word in a line/file.
+
+3. Calculate the mode of an array. The mode is the element occurred maximum time in the array.
+
+4. Implement weighted graph using adjcency list method.
+
+
+

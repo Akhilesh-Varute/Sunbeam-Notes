@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <table>
+        <tr>
+          <td>No</td>
+          <td>
+            <input type="number" id="txtNo" />
+          </td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>
+            <input type="text" id="txtName" />
+          </td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td>
+            <input type="text" id="txtAddress" />
+          </td>
+        </tr>
+      </table>
+      <input type="button" value="Add Record" onclick="Add()" />
+
+      <input type="button" value="Reset" onclick="Reset()" />
+      <br />
+      <hr />
+      <table style="width: 400px; text-align: center" border="1">
+        <thead>
+          <th>No</th>
+          <th>Name</th>
+          <th>Address</th>
+        </thead>
+        <tbody id="myTableBody"></tbody>
+      </table>
+    </center>
+
+    <script>
+      function Add() {
+        var refToTxtNo = document.getElementById("txtNo");
+
+        var refToTxtName = document.getElementById("txtName");
+
+        var refToTxtAddress = document.getElementById("txtAddress");
+
+        var refToTableBody = document.getElementById("myTableBody");
+
+        var row =
+          `<tr>
+                  <td>` +
+          refToTxtNo.value +
+          `</td>
+                  <td>` +
+          refToTxtName.value +
+          `</td>
+                  <td>` +
+          refToTxtAddress.value +
+          `</td>
+                </tr>`;
+        refToTableBody.innerHTML = refToTableBody.innerHTML + row;
+      }
+
+      function Reset() {
+        var refToTxtNo = document.getElementById("txtNo");
+
+        var refToTxtName = document.getElementById("txtName");
+
+        var refToTxtAddress = document.getElementById("txtAddress");
+
+        refToTxtNo.value = "";
+        refToTxtName.value = "";
+        refToTxtAddress.value = "";
+      }
+    </script>
+  </body>
+</html>

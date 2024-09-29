@@ -1,0 +1,27 @@
+1. Implement a singly linear linked list with head and tail pointer. Implement addFirst(), addLast(), delFirst(), delLast, display() operations.
+
+2. Implement singly circular linked list using tail pointer (no head pointer). Compare time complexities of all operations.
+
+3. Write a function to find middle node in a linked list.
+
+4. Write a function to reverse linked list.
+
+5. In singly linear list implement following operations.
+	i. insert a new node after a given node
+	ii. insert a new node before a given node
+
+6. Sort singly linear list using bubble sort.
+
+7. Display Singly linear linked list in reverse order.
+
+8. Write a function which will insert values in sorted order into linked list.
+
+9. Write two different functions which return maximum and minimum value from the linked list respectively.
+
+10. Implement menudriven program to maintain linked list of employees and provide below operations.
+	i. Add employee (Perfrom any add operation)
+	ii. Display all employees
+	iii. Search employee by name
+	iv. Delete employee by empid
+	v. Update salary of employee
+

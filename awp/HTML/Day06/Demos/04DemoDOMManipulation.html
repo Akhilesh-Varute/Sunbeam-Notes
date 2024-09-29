@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <table border="1">
+        <tr id="1" onmouseover="Execute(1)" onmouseout="Revert(1)">
+          <td>1</td>
+          <td>mahesh</td>
+          <td>pune</td>
+        </tr>
+
+        <tr id="2" onmouseover="Execute(2)" onmouseout="Revert(2)">
+          <td>2</td>
+          <td>nilesh</td>
+          <td>chennai</td>
+        </tr>
+
+        <tr id="3" onmouseover="Execute(3)" onmouseout="Revert(3)">
+          <td>3</td>
+          <td>sameer</td>
+          <td>mumbai</td>
+        </tr>
+      </table>
+    </center>
+
+    <script>
+      function Execute(id) {
+        debugger;
+        var refToRow = document.getElementById(id);
+        refToRow.style.backgroundColor = "green";
+      }
+
+      function Revert(id) {
+        debugger;
+        var refToRow = document.getElementById(id);
+        refToRow.style.backgroundColor = "white";
+      }
+    </script>
+  </body>
+</html>

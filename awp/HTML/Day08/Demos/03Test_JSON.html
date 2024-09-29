@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      debugger;
+      var helper = new XMLHttpRequest();
+
+      helper.onreadystatechange = () => {
+        console.log("now readystate is " + helper.readyState);
+        if (helper.readyState == 4 && helper.status == 200) {
+          debugger;
+          var responseInString = helper.responseText;
+          var employees = JSON.parse(responseInString);
+
+          for (var i = 0; i < employees.length; i++) {
+            var employee = employees[i];
+            console.log("Welcome " + employee.Name);
+            console.log(employee.Expertise);
+          }
+        }
+      };
+
+      helper.open("GET", "http://127.0.0.1:5500/mydata.json");
+      helper.send();
+    </script>
+  </body>
+</html>

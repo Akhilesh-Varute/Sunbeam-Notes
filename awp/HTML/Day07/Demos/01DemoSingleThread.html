@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="Click Me" onclick="Disturb()" />
+    <script>
+      function Disturb() {
+        alert("Hello! Test!");
+      }
+      function DoSomethingComplex() {
+        console.log("Something Complex");
+      }
+    </script>
+    <script>
+      //debugger;
+      console.log("Hi");
+      var queueNo = window.setInterval(DoSomethingComplex, 5000);
+      console.log(queueNo);
+      console.log("Bye");
+    </script>
+  </body>
+</html>

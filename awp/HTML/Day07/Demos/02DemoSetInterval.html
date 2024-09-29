@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <input type="button" value="Start" onclick="Start()" />
+
+      <input type="button" value="Stop" onclick="Stop()" />
+      <input type="button" value="Show Alert" onclick="Disturb()" />
+      <br /><br /><br /><br /><br /><br />
+      <div
+        style="
+          height: 50px;
+          width: 50px;
+          background-color: yellow;
+          text-align: center;
+        "
+        id="myDiv"
+      ></div>
+    </center>
+
+    <script>
+      var counter = 0;
+      var queues = new Array();
+
+      function KeepCounting() {
+        counter = counter + 1;
+
+        var refToMyDiv = document.getElementById("myDiv");
+
+        refToMyDiv.innerText = counter;
+      }
+      function Start() {
+        var queueNo = window.setInterval(KeepCounting, 1000);
+
+        console.log("Started queue with No = " + queueNo);
+
+        queues.push(queueNo);
+      }
+
+      function Stop() {
+        var queueNoToBeStopped = queues.pop();
+        console.log("Stopped queue with No = " + queueNoToBeStopped);
+        window.clearInterval(queueNoToBeStopped);
+      }
+
+      function Disturb() {
+        alert("Test");
+      }
+    </script>
+  </body>
+</html>

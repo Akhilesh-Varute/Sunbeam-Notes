@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="Click Me" onclick="Execute()" />
+    <br />
+    <div
+      style="height: 100px; width: 200px; background-color: cadetblue"
+      id="myDiv"
+    ></div>
+
+    <script>
+      function Execute() {
+        debugger;
+        var refToMyDiv = document.getElementById("myDiv");
+        refToMyDiv.style.backgroundColor = "yellow";
+      }
+    </script>
+  </body>
+</html>

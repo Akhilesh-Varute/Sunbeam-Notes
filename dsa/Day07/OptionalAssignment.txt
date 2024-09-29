@@ -1,0 +1,10 @@
+1. Implement heap sort using min heap.
+
+2. Implement priority queue using max and min heap.
+
+3. Implement quick sort to sort array in descending order.
+
+4. Implement quick sort using right most element as pivot.
+
+
+

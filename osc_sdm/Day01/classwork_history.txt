@@ -1,0 +1,81 @@
+date
+cal
+cal -y
+cal -y 2020
+man cal
+pwd
+mkdir OSC
+ls
+mkdir DSA DBT AWP JAVA
+ls
+mkdir -p dir1/dir2/dir3/dir4
+ls
+ls -R
+ls
+rmdir JAVA
+ls
+pwd
+cd OSC
+pwd
+cd ~
+pwd
+cd -
+ls -a
+cd ..
+pwd
+ls
+ls -a
+touch file1.txt
+ls
+touch file2.txt file3.txt file4.txt
+ls
+ls -l
+ls
+ls -a
+touch .hidden.txt
+ls
+ls -a
+cat > test.txt
+ls
+cat test.txt 
+cat > test.txt
+cat test.txt 
+cat >> test.txt
+cat test.txt 
+ls
+rm file4.txt 
+ls
+rmdir dir1
+rm -r dir1
+ls
+cp test.txt copy.txt
+ls
+cat copy.txt 
+cp test.txt OSC
+ls
+ls OSC
+ls
+cp -r OSC copy
+ls OSC
+ls copy
+ls
+mv test.txt new.txt
+ls
+mv new.txt OSC
+ls
+ls OSC
+ls
+mv copy OSC
+ls
+ls OSC
+tty
+whoami
+who
+w
+uname
+uname -r
+uname -a
+ps
+ps -e
+history
+

@@ -1,0 +1,6 @@
+Day 7
+1. import test_hibernate_basic in your workspace (if not done already) n download hibernate dependencies.
+
+2. Refer to "day7-data\day7_help\IPL sql.txt"
+Refer to teams table .
+WE will create a standalone demo to create n insert teams records.

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <form action="mycodeonserver.jsp" method="get"> -->
+    <form action="mycodeonserver.jsp" method="post">
+      <center>
+        <table>
+          <tr>
+            <td>Name</td>
+            <td><input type="text" required="required" name="MyName" /></td>
+          </tr>
+          <tr>
+            <td>Age</td>
+            <td>
+              <input
+                type="number"
+                required="required"
+                name="MyAge"
+                min="18"
+                max="60"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>EMail</td>
+            <td>
+              <input
+                type="email"
+                required
+                pattern="^[a-zA-Z0-9+_.-]+
+                         @[a-zA-Z0-9]+$"
+                name="MyEMail"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>DOB</td>
+            <td><input type="date" name="MyDOB" /></td>
+          </tr>
+          <tr>
+            <td>Fav. Color</td>
+            <td><input type="color" name="MyFavColor " /></td>
+          </tr>
+          <tr>
+            <td>Gender</td>
+            <td>
+              <input type="radio" name="Gender" value="1" /> F
+              <input type="radio" name="Gender" value="2" /> M
+              <input type="radio" name="Gender" value="3" /> O
+            </td>
+          </tr>
+          <tr>
+            <td>Country</td>
+            <td>
+              <select name="MyCountry">
+                <option value="91">India</option>
+                <option value="44">UK</option>
+                <option value="11">USA</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Hobbies</td>
+            <td>
+              <select name="MyHobbies" multiple>
+                <option value="1">Reading</option>
+                <option value="2">Writing</option>
+                <option value="3">Singing</option>
+                <option value="4">Dancing</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>I Accept Terms</td>
+            <td>
+              <input type="checkbox" name="AcceptTerms" />
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <input type="submit" name="btnRegister" value="RegisterHere" />
+            </td>
+          </tr>
+        </table>
+      </center>
+    </form>
+  </body>
+</html>

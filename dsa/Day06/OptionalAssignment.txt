@@ -1,0 +1,19 @@
+1. Write recursive function to Search node into bst.
+
+2. Delete node which is having 2 childs in BST. (Replace node data by inorder successor)
+
+3. Write a function to count the number of leaf nodes in the given binary search tree.
+
+4. Write a function to count the number of non leaf nodes in the given binary search tree.
+
+5. Write a function to return level/depth of given node in a BST.
+
+6. Print parent of user entered node in BST
+
+7. Print childrens of user entered node in BST
+
+8. Print all pairs of siblings in BST
+
+
+
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var employees = [
+        {
+          No: 1,
+          Name: "Mahesh",
+          IsEmployee: false,
+          FavTech: undefined,
+          Expertise: ["JS", "React", ".NET"],
+        },
+        {
+          No: 2,
+          Name: "Nilesh",
+          IsEmployee: true,
+          FavTech: undefined,
+          Expertise: ["CPP", "Java"],
+        },
+        {
+          No: 3,
+          Name: "Rahul",
+          IsEmployee: true,
+          FavTech: undefined,
+          Expertise: ["CPP", "Java", "DB", ".NET", "React", "etc"],
+        },
+      ];
+
+      for (var i = 0; i < employees.length; i++) {
+        var employee = employees[i];
+        console.log("Welcome " + employee.Name);
+        console.log(employee.Expertise);
+      }
+    </script>
+  </body>
+</html>

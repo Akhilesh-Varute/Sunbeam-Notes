@@ -1,0 +1,65 @@
+Day 7
+1. import test_hibernate_basic in your workspace (if not done already) n download hibernate dependencies.
+
+2. Refer to "day7-data\day7_help\IPL sql.txt"
+Refer to teams table .
+WE will create a standalone demo to create n insert teams records.
+
+Day 8
+1. Copy day8.1 project in your workspace. Import it as existing Maven Project
+Edit DB password , from hibernate.cfg.xml
+1.1 Open com.app.tester
+Go through the testers , to revise today's work.
+You can either go through Tester ---> DAO method invocations
+OR 
+you can try writing on your own (only some of the requirements)
+
+2. In 2nd half (around 4:30 PM) , solve the assignment
+We will first discuss n then you will try to solve.
+2.1 Continue with day7_lab (where you already have Team POJO n DAO)
+Insert some teams (using AddNewTeam tester)
+Solve these objectives
+1. Display  team id n abbreviation of all the teams
+i/p : no inputs
+Tester --> Team Dao instance --> invoke dao's method
+DAO : jpql : select new com.app.pojos.Team(teamId,abbreviation) from Team t
+try : session.createQuery(jpql,Team.class).getResultList() 
+Add matching ctor in Team class
+
+2. Display team details , of a team by it's id
+i/p : team id
+o/p : team details or null
+DAO : session.get(Team.class,teamId)
+
+
+3. Display all those teams who need , player's max age < specific age n min no of wickets taken > specified wickets
+i/p : age , no of wickets
+DAO : select t from Team t where t.maxAge < :age and t.wicketsTaken > :wkts
+list=session.createQuery(jpql,Team.class).setParameter.....getResultList();
+
+4. Update max age n batting avg requirement of a specific team by it's name (team name is unique)
+i/p team name , new max age n batting avg
+Hint : 
+DAO : jpql=select t from Team t where t.name=:teamName
+Team t=session.createQuery(jpql,Team.class).setParameter(...).getSingleResult();
+// t : persistent
+//call setters : 2
+tx.commit()  --update 1
+
+5. Delete team details
+i/p : team id
+Hint :Team myTeam =session.get(Team.class,teamId)
+null checking ---not null --myTeam : persistent
+session.delete(myTeam); //myTeam : REMOVED
+tx.commit(); //delete query , session.close() --L1 cache gone -- removed from L1 cache --> myTeam : transient
+
+
+
+
+
+
+
+
+
+
+

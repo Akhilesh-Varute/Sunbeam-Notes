@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=sts
+Comment=Spring Tool Suite
+Icon=/home/akhil/Videos/sts-bundle/sts-3.9.18.RELEASE/icon.xpm
+Exec=/home/akhil/Videos/sts-bundle/sts-3.9.18.RELEASE/STS
+Terminal=false
+Categories=Development;IDE;Java;
+StartupWMClass=STS
